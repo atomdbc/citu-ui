@@ -10,7 +10,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">About SITU</h3>
             <p className="text-gray-300">
-              SITU is Ivory Coast's leading real estate marketplace, connecting buyers, sellers, and renters with the best properties across the country.
+              SITU is Ivory Coast&apos;s leading real estate marketplace, connecting buyers, sellers, and renters with the best properties across the country.
             </p>
           </div>
 
@@ -32,7 +32,7 @@ const Footer = () => {
             <ul className="space-y-2">
               <li className="flex items-center">
                 <MapPin size={18} className="mr-2" />
-                <span>123 Main St, Abidjan, Côte d'Ivoire</span>
+                <span>123 Main St, Abidjan, Côte d&apos;Ivoire</span>
               </li>
               <li className="flex items-center">
                 <Phone size={18} className="mr-2" />
