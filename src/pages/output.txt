@@ -1,0 +1,6 @@
+.
+├── _app.js
+├── listings.js
+└── output.txt
+
+1 directory, 3 files

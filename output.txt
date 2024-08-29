@@ -1,0 +1,46 @@
+.
+├── README.md
+├── jsconfig.json
+├── next.config.mjs
+├── output.txt
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── public
+│   ├── images
+│   │   ├── family.jpeg
+│   │   └── placeholder-image.jpg
+│   ├── next.svg
+│   └── vercel.svg
+├── src
+│   ├── app
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.js
+│   │   ├── listings
+│   │   │   ├── [id]
+│   │   │   │   └── page.js
+│   │   │   ├── page.js
+│   │   │   └── search.js
+│   │   └── page.js
+│   ├── components
+│   │   ├── BlogSection.js
+│   │   ├── CallToAction.js
+│   │   ├── FeaturedListings.js
+│   │   ├── Footer.js
+│   │   ├── Header.js
+│   │   ├── HeroSection.js
+│   │   ├── HowItWorks.js
+│   │   ├── ListingsSearchBar.js
+│   │   ├── Pagination.js
+│   │   ├── PropertyCard.js
+│   │   ├── ReviewForm.js
+│   │   ├── SearchBar.js
+│   │   ├── Testimonials.js
+│   │   └── WhyChooseUs.js
+│   └── pages
+│       ├── _app.js
+│       └── output.txt
+└── tailwind.config.js
+
+9 directories, 35 files
