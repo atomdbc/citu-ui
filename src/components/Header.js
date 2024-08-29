@@ -22,7 +22,7 @@ const Header = () => {
           {/* Logo with link */}
           <a href="/" className="flex items-center">
             <Image
-              src="/situ_logo.jpeg" // Update the path to the logo image
+              src="/situ_logo.png" // Update the path to the logo image
               alt="SITU Logo"
               width={120} // Adjust width as needed
               height={40} // Adjust height as needed
