@@ -28,13 +28,13 @@ const BlogSection = () => {
     {
       title: "How to Get the Best Mortgage Rates in Ivory Coast",
       excerpt: "Learn the insider tips to secure the most favorable mortgage terms for your new home.",
-      date: "May 10, 2023",
+      date: "May 10, 2024",
       image: "/images/placeholder-image.jpg"
     },
     {
       title: "The Rise of Eco-Friendly Homes in West Africa",
       excerpt: "Explore the growing trend of sustainable housing and its impact on the Ivorian real estate market.",
-      date: "May 5, 2023",
+      date: "May 5, 2024",
       image: "/images/placeholder-image.jpg"
     }
   ];

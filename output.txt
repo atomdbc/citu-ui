@@ -7,27 +7,60 @@
 ├── package.json
 ├── postcss.config.mjs
 ├── public
+│   ├── citu_logo.png
+│   ├── footer_logo.png
+│   ├── footer_png.png
 │   ├── images
 │   │   ├── family.jpeg
-│   │   └── placeholder-image.jpg
+│   │   ├── hero.png
+│   │   ├── listings
+│   │   │   ├── cocody1.png
+│   │   │   ├── cocody2.png
+│   │   │   ├── cocody3.png
+│   │   │   ├── cocody4.png
+│   │   │   ├── plateau1.png
+│   │   │   ├── plateau2.png
+│   │   │   ├── plateau3.png
+│   │   │   ├── plateau4.png
+│   │   │   ├── riviera1.png
+│   │   │   ├── riviera2.png
+│   │   │   ├── riviera3.png
+│   │   │   └── riviera4.png
+│   │   ├── map-placeholder.png
+│   │   ├── person1.png
+│   │   ├── person2.png
+│   │   ├── person3.png
+│   │   ├── placeholder-image.jpg
+│   │   ├── prev1.png
+│   │   ├── prev2.png
+│   │   ├── prev3.png
+│   │   ├── prev4.png
+│   │   ├── scraper1.png
+│   │   ├── scraper2.png
+│   │   ├── scraper3.png
+│   │   └── scraper4.png
 │   ├── next.svg
 │   └── vercel.svg
 ├── src
 │   ├── app
+│   │   ├── [lang]
+│   │   │   ├── layout.js
+│   │   │   ├── listings
+│   │   │   │   ├── [id]
+│   │   │   │   │   └── page.js
+│   │   │   │   ├── page.js
+│   │   │   │   └── search.js
+│   │   │   └── page.js
 │   │   ├── favicon.ico
 │   │   ├── globals.css
 │   │   ├── layout.js
-│   │   ├── listings
-│   │   │   ├── [id]
-│   │   │   │   └── page.js
-│   │   │   ├── page.js
-│   │   │   └── search.js
 │   │   └── page.js
 │   ├── components
 │   │   ├── BlogSection.js
-│   │   ├── CallToAction.js
-│   │   ├── FeaturedListings.js
+│   │   ├── DreamPlaceFinder.js
+│   │   ├── EarlyAccessModal.js
 │   │   ├── Footer.js
+│   │   ├── FutureListings.js
 │   │   ├── Header.js
 │   │   ├── HeroSection.js
 │   │   ├── HowItWorks.js
@@ -35,12 +68,22 @@
 │   │   ├── Pagination.js
 │   │   ├── PropertyCard.js
 │   │   ├── ReviewForm.js
+│   │   ├── ReviewList.js
 │   │   ├── SearchBar.js
-│   │   ├── Testimonials.js
-│   │   └── WhyChooseUs.js
+│   │   ├── ThankYouModal.js
+│   │   ├── UserEarlyAccessModal.js
+│   │   ├── WhyChooseUs.js
+│   │   ├── WhyYoullLikeCitu.js
+│   │   └── listing
+│   │       ├── AgentCard.js
+│   │       ├── ListingDetailSection.js
+│   │       ├── ListingGallery.js
+│   │       ├── PropertyDescription.js
+│   │       ├── PropertyDetails.js
+│   │       └── PropertyFeatures.js
 │   └── pages
 │       ├── _app.js
 │       └── output.txt
 └── tailwind.config.js
 
-9 directories, 35 files
+12 directories, 75 files
