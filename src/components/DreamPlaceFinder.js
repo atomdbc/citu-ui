@@ -88,7 +88,6 @@ const DreamPlaceFinder = ({ lang = 'en-US' }) => {
     backgroundColor: '#F8F8F8'
   };
 
-
   const getTitleStyle = (isFrench) => ({
     fontSize: isFrench ? '36px' : '42px',
     fontWeight: '700',
@@ -155,7 +154,8 @@ const DreamPlaceFinder = ({ lang = 'en-US' }) => {
           {t.subtitle}
         </p>
 
-        <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start gap-8 lg:gap-12">
+        {/* Updated container structure for responsive layout */}
+        <div className="w-full flex flex-col md:flex-row md:flex-wrap lg:flex-nowrap justify-center gap-8 lg:gap-12">
           {/* Search Card */}
           <div 
             style={{
@@ -163,7 +163,7 @@ const DreamPlaceFinder = ({ lang = 'en-US' }) => {
               height: '468px',
               padding: isFrench ? '28px 24px' : '32px'
             }}
-            className="w-full lg:w-[359.39px]"
+            className="w-full md:w-[359.39px] lg:w-[359.39px]"
           >
             <h2 style={getTitleStyle(isFrench)}>
               {t.search.title}
@@ -173,7 +173,6 @@ const DreamPlaceFinder = ({ lang = 'en-US' }) => {
               {t.search.description}
             </p>
 
-            {/* Buy/Rent Toggle */}
             <div 
               style={{
                 display: 'flex',
@@ -213,7 +212,6 @@ const DreamPlaceFinder = ({ lang = 'en-US' }) => {
               ))}
             </div>
 
-            {/* Search Input */}
             <div style={{ position: 'relative', marginBottom: '32px' }}>
               <input
                 type="text"
@@ -243,7 +241,6 @@ const DreamPlaceFinder = ({ lang = 'en-US' }) => {
               />
             </div>
 
-            {/* Calculator Section */}
             <div style={{ marginTop: isFrench ? '24px' : '32px' }}>
               <div 
                 style={{
@@ -294,16 +291,17 @@ const DreamPlaceFinder = ({ lang = 'en-US' }) => {
 
           {/* Explore Section */}
           <div 
-            className="flex flex-col w-full lg:w-[359.39px]" 
-            style={{ gap: '16px', height: 'auto', lg: { height: '468px' } }}
-          >           <div 
-          style={{
-            ...baseCardStyle,
-            backgroundColor: '#DD4440',
-            height: '220px',
-            padding: isFrench ? '24px' : '32px'
-          }}
-        >
+            className="w-full md:w-[359.39px] lg:w-[359.39px] flex flex-col"
+            style={{ gap: '16px', height: 'auto' }}
+          >
+            <div 
+              style={{
+                ...baseCardStyle,
+                backgroundColor: '#DD4440',
+                height: '220px',
+                padding: isFrench ? '24px' : '32px'
+              }}
+            >
               <h2 
                 style={{ 
                   fontSize: isFrench ? '36px' : '42px',
@@ -360,7 +358,7 @@ const DreamPlaceFinder = ({ lang = 'en-US' }) => {
               height: '468px',
               padding: isFrench ? '28px 24px' : '32px'
             }}
-            className="w-full lg:w-[359.39px]"
+            className="w-full md:mx-auto md:w-[359.39px] lg:mx-0 lg:w-[359.39px]"
           >
             <h2 style={getTitleStyle(isFrench)}>
               {t.contact.title}
