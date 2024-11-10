@@ -337,8 +337,8 @@ const ListingDetailSection = ({ lang = 'en-US', listingId = '1' }) => {
         </div>
 
         {/* Key Information */}
-        <div className="mb-8">
-          <h2 className="font-work-sans text-[24px] font-semibold leading-[24px] text-gray-800 mb-6">
+        <div className="mb-6">
+          <h2 className="font-work-sans text-[24px] font-semibold leading-[24px] text-gray-800 mb-6 ">
             {t.keyInformation}
           </h2>
           <div className="space-y-4">
@@ -374,7 +374,7 @@ const ListingDetailSection = ({ lang = 'en-US', listingId = '1' }) => {
       {/* Desktop View - Remains unchanged */}
       <div className="hidden lg:flex gap-16 mt-8 justify-between">
         {/* Left Column */}
-        <div className="w-[45%] flex-shrink-0">
+        <div className="w-[45%] flex-shrink-0 mt-10">
           <MainContent />
         </div>
 
