@@ -329,7 +329,7 @@ const UserEarlyAccessModal = ({ isOpen, onClose, lang = 'en-US' }) => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`bg-[#DD4440] text-white py-2.5 sm:py-3 px-12 sm:px-16 rounded-lg text-sm sm:text-base font-medium
+                  className={`bg-[#F87171] text-white py-2.5 sm:py-3 px-12 sm:px-16 rounded-lg text-sm sm:text-base font-semibold
                     transition-all duration-300 flex items-center gap-2
                     ${isSubmitting 
                       ? 'opacity-50 cursor-not-allowed' 

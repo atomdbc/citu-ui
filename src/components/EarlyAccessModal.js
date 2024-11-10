@@ -350,17 +350,17 @@ const EarlyAccessModal = ({ isOpen, onClose, lang = 'en-US' }) => {
               </div>
 
               <div className="flex justify-center">
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className={`bg-[#DD4440] text-white py-2.5 sm:py-3 px-8 sm:px-12 rounded-[24px] sm:rounded-[32px] 
-                    text-sm sm:text-base font-medium transition-all duration-300 flex items-center gap-2
-                    ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#C33C39]'}`}
-                >
-                  {isSubmitting && <Loader2 className="animate-spin w-4 h-4 sm:w-[18px] sm:h-[18px]" />}
-                  {isSubmitting ? t.submitting : t.submit}
-                </button>
-              </div>
+  <button
+    type="submit"
+    disabled={isSubmitting}
+    className={`bg-[#F87171] text-white py-2.5 sm:py-3 px-8 sm:px-12 rounded-[24px] sm:rounded-[12px]  font-semibold
+      text-sm sm:text-base font-medium transition-all duration-300 flex items-center gap-2
+      ${isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#C33C39]'}`}
+  >
+    {isSubmitting && <Loader2 className="animate-spin w-4 h-4 sm:w-[18px] sm:h-[18px]" />}
+    {isSubmitting ? t.submitting : t.submit}
+  </button>
+</div>
             </div>
           </form>
         </div>
