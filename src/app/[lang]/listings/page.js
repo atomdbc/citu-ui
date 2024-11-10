@@ -2,10 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/api';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import ListingsSearchBar from '../../components/ListingsSearchBar';
-import PropertyCard from '../../components/PropertyCard';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import ListingsSearchBar from '@/components/ListingsSearchBar';
+import PropertyCard from '@/components/PropertyCard';
 import { MapPin } from 'lucide-react';
 
 const mapStyles = [
