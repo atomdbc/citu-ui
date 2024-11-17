@@ -1,6 +1,6 @@
 // src/services/api.js
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000/api/waitlist';
+const API_BASE_URL =  'https://citu-backend.vercel.app/api/waitlist';
 
 export const submitUserWaitlist = async (data) => {
   try {
