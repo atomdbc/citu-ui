@@ -22,7 +22,7 @@ const translations = {
   },
   'fr': {
     userEarlyAccess: "S'inscrire pour l'Accès Anticipé",
-    agentEarlyAccess: "Accès Anticipé",
+    agentEarlyAccess: "Accès anticipé pour les agents",
     newHomes: 'Nouvelles Maisons',
     findDevelopments: 'Trouver des Développements',
     findAgents: 'Trouver des Agents/Agences',
@@ -166,7 +166,7 @@ const Header = ({ lang = 'en-US' }) => {
             <button 
               className="hidden sm:block bg-[#F87171] text-white px-6 py-3 rounded-xl hover:bg-[#EF4444] transition duration-300 text-base font-medium whitespace-nowrap"
               onClick={() => setIsAgentModalOpen(true)}
-            >
+              style={{ fontWeight:'600' }}>
               {t.agentEarlyAccess}
             </button>
 

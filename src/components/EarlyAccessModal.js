@@ -184,14 +184,16 @@ const EarlyAccessModal = ({ isOpen, onClose, lang = 'en-US' }) => {
           </button>
 
           <div className="text-center mb-4 sm:mb-6">
-            <Image 
-              src="/citu_logo.png" 
-              alt="Citu Logo" 
-              width={100} 
-              height={40} 
-              className="mx-auto sm:w-[120px] sm:h-[48px]" 
-            />
-          </div>
+            <div className="relative w-[100px] h-[40px] sm:w-[120px] sm:h-[48px] mx-auto">
+              <Image 
+                src="/citu_logo.png" 
+                alt="Citu Logo" 
+                fill
+                className="object-contain"
+                sizes="(max-width: 640px) 100px, 120px"
+              />
+            </div>
+            </div>
 
           <h2 className="text-xl sm:text-2xl font-bold text-[#DD4440] mb-6 sm:mb-8 text-center px-2">
             {t.title}

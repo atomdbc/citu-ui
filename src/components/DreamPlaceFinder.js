@@ -81,7 +81,7 @@ const DreamPlaceFinder = ({ lang = 'en-US' }) => {
   const isFrench = lang === 'fr';
 
   const baseCardStyle = {
-    width: '100%',
+    width: 'auto',
     maxWidth: '359.39px',
     borderRadius: '42px',
     boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
@@ -121,7 +121,7 @@ const DreamPlaceFinder = ({ lang = 'en-US' }) => {
 
   return (
     <div className={`relative w-full bg-white mt-12 lg:mt-4 ${workSans.className}`}>
-      <section className="relative mx-auto mb-16 lg:mb-32 px-4 lg:px-0" style={{ maxWidth: '1280px' }}>
+      <section className="relative mx-auto mb-16 lg:mb-32 px-4 lg:px-0" style={{ maxWidth: '100%' }}>
         <h1 
           className="text-center px-4" 
           style={{ 
@@ -292,7 +292,7 @@ const DreamPlaceFinder = ({ lang = 'en-US' }) => {
           {/* Explore Section */}
           <div 
             className="w-full md:w-[359.39px] lg:w-[359.39px] flex flex-col"
-            style={{ gap: '16px', height: 'auto' }}
+            style={{ gap: '16px', height: '468px' }}
           >
             <div 
               style={{
@@ -330,26 +330,42 @@ const DreamPlaceFinder = ({ lang = 'en-US' }) => {
             </div>
 
             <div 
-              style={{
-                ...baseCardStyle,
-                height: '232px',
-                overflow: 'hidden'
-              }}
-            >
+            style={{
+              ...baseCardStyle,
+              height: '232px',
+              overflow: 'hidden',
+              padding: '0',
+              display: 'flex',
+              gap: '4px'
+            }}
+          >
+            <div className="flex-1 relative">
               <Image 
                 src="/images/scraper4.png" 
-                alt="Property showcase" 
-                width={359}
-                height={234}
-                className="object-cover w-full h-full"
+                alt="Property showcase 1" 
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 180px"
                 style={{ 
-                  borderRadius: '42px',
-                  position: 'relative',
-                  top: '10px'
+                  borderRadius: '42px 0 0 42px'
+                }}
+              />
+            </div>
+            <div className="w-[1px] bg-gray-200 self-stretch my-4" />
+            <div className="flex-1 relative">
+              <Image 
+                src="/images/scraper5.png" 
+                alt="Property showcase 2" 
+                fill
+                className="object-cover"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 180px"
+                style={{ 
+                  borderRadius: '0 42px 42px 0'
                 }}
               />
             </div>
           </div>
+        </div>
 
           {/* Contact Card */}
           <div 
