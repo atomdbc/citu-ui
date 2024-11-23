@@ -29,13 +29,13 @@ const HeroSection = ({ lang = 'en-US' }) => {
 
   return (
     <section className={`relative w-full h-[500px] sm:h-[600px] md:h-[700px] lg:h-[778px] ${workSans.className}`}>
-      {/* Background Image */}
+      {/* Background Image - Adjusted for mobile subject visibility */}
       <div className="absolute inset-0 w-full h-full">
         <Image
           src="/images/hero.png"
-          alt="City skyline"
+          alt="Woman with laptop"
           fill
-          className="object-cover"
+          className="object-cover object-left sm:object-center"
           priority
           sizes="100vw"
           quality={90}
@@ -43,9 +43,9 @@ const HeroSection = ({ lang = 'en-US' }) => {
       </div>
 
       {/* Content Container */}
-      <div className="relative w-full h-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative w-full h-full max-w-[1440px] mx-auto px-0 sm:px-6 lg:px-8">
         {/* Search Container */}
-        <div className="absolute w-[90%] sm:w-[85%] md:w-[720px] 
+        <div className="absolute w-[95%] sm:w-[85%] md:w-[720px] 
                       top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/3">
           {/* Semi-transparent background */}
           <div className="absolute inset-0 bg-white opacity-75 rounded-[24px] sm:rounded-[32px] md:rounded-[42px]" />
@@ -63,10 +63,10 @@ const HeroSection = ({ lang = 'en-US' }) => {
             <div className="w-full max-w-[600px] mx-auto mt-4 sm:mt-6 md:mt-8 
                           bg-[#DD4440] rounded-[16px] sm:rounded-[20px] 
                           p-4 sm:p-6 md:p-8">
-              {/* Buy/Rent Toggle - Updated positioning */}
-              <div className="flex items-center pl-[48px]"> {/* Added exact left padding */}
+              {/* Buy/Rent Toggle */}
+              <div className="flex items-center pl-[48px]">
                 <button 
-                  className={`text-gray font-bold text-[20px] leading-[30px] relative transition-colors
+                  className={`text-white font-bold text-[20px] leading-[30px] relative transition-colors
                             ${activeTab === 'buy' ? '' : 'opacity-70 hover:opacity-90'}`}
                   onClick={() => setActiveTab('buy')}
                 >
@@ -75,7 +75,6 @@ const HeroSection = ({ lang = 'en-US' }) => {
                     <div className="absolute -bottom-1 left-0 w-full h-[2px] bg-white"></div>
                   )}
                 </button>
-                {/* Exact spacing between buttons */}
                 <div className="w-[15.43px]"></div>
                 <button 
                   className={`text-white font-bold text-[20px] leading-[30px] relative transition-colors

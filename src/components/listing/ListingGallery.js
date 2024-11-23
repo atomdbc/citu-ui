@@ -21,6 +21,12 @@ const ListingGallery = ({ images = [] }) => {
     setShowModal(true);
   };
 
+  const closeModal = (e) => {
+    e.stopPropagation(); // Prevent event from bubbling up
+    setShowModal(false);
+    setSelectedImage(null);
+  };
+
   // Mobile Gallery View
   const MobileGallery = () => (
     <div className="w-full overflow-x-auto whitespace-nowrap hide-scrollbar">
@@ -53,7 +59,7 @@ const ListingGallery = ({ images = [] }) => {
     </div>
   );
 
-  // Desktop Gallery View (Your Original Design)
+  // Desktop Gallery View
   const DesktopGallery = () => (
     <div className="flex gap-4 mb-8">
       {/* Large Main Image - Left Side */}
@@ -122,20 +128,27 @@ const ListingGallery = ({ images = [] }) => {
 
       {/* Full Screen Modal */}
       {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center">
+        <div 
+          className="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-center justify-center"
+          onClick={closeModal} // Added click handler to background
+        >
           <button
-            onClick={() => setShowModal(false)}
-            className="absolute top-4 right-4 text-white hover:text-gray-300"
+            onClick={closeModal}
+            className="absolute top-4 right-4 text-white hover:text-gray-300 z-50"
           >
             <X size={32} />
           </button>
-          <div className="w-full h-full p-4 flex items-center justify-center">
+          <div 
+            className="w-full h-full p-4 flex items-center justify-center"
+            onClick={(e) => e.stopPropagation()} // Prevent closing when clicking the image
+          >
             <div className="relative w-full h-full">
               <Image
                 src={selectedImage}
                 alt="Full size view"
                 fill
                 className="object-contain"
+                onClick={(e) => e.stopPropagation()} // Prevent closing when clicking the image
               />
             </div>
           </div>
