@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Work_Sans } from 'next/font/google';
-import UserEarlyAccessModal from './UserEarlyAccessModal';
+import ModalManager from './ModalManager'; // Changed import
 
 const workSans = Work_Sans({ subsets: ['latin'] });
 
@@ -23,7 +23,7 @@ const translations = {
 };
 
 const HeroSection = ({ lang = 'en-US' }) => {
-  const [isUserModalOpen, setIsUserModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false); // Renamed state variable
   const [activeTab, setActiveTab] = useState('buy');
   const t = translations[lang] || translations['en-US'];
 
@@ -101,7 +101,7 @@ const HeroSection = ({ lang = 'en-US' }) => {
                 <button
                   className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 
                            text-[#DD4440] p-1 sm:p-2 hover:text-[#EF4444] transition-colors"
-                  onClick={() => setIsUserModalOpen(true)}
+                  onClick={() => setIsModalOpen(true)} // Updated onClick handler
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -124,9 +124,10 @@ const HeroSection = ({ lang = 'en-US' }) => {
         </div>
       </div>
 
-      <UserEarlyAccessModal
-        isOpen={isUserModalOpen}
-        onClose={() => setIsUserModalOpen(false)}
+      {/* Replace UserEarlyAccessModal with ModalManager */}
+      <ModalManager
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
         lang={lang}
       />
     </section>

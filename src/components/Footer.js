@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { MapPin, Mail, Phone } from 'lucide-react';
 import { FaXTwitter, FaInstagram, FaYoutube, FaLinkedinIn } from 'react-icons/fa6';
-import UserEarlyAccessModal from './UserEarlyAccessModal';
+import ModalManager from './ModalManager'; // Replace UserEarlyAccessModal with ModalManager
 
 const translations = {
   'en-US': {
@@ -30,14 +30,14 @@ const translations = {
 };
 
 const Footer = ({ lang = 'en-US' }) => {
-  const [isUserModalOpen, setIsUserModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const t = translations[lang] || translations['en-US'];
 
   const handleLinkClick = (linkText) => {
     // Check if the clicked link is the early access link
     if (linkText.toLowerCase().includes('early access') || 
         linkText.toLowerCase().includes('accès anticipé')) {
-      setIsUserModalOpen(true);
+      setIsModalOpen(true);
     }
   };
 
@@ -120,11 +120,11 @@ const Footer = ({ lang = 'en-US' }) => {
         </div>
       </div>
 
-      {/* User Early Access Modal */}
-      <UserEarlyAccessModal 
-        isOpen={isUserModalOpen} 
-        onClose={() => setIsUserModalOpen(false)} 
-        lang={lang} 
+      {/* Modal Manager instead of UserEarlyAccessModal */}
+      <ModalManager 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        lang={lang}
       />
     </footer>
   );

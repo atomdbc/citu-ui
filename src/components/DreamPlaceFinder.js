@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Search, Calculator } from 'lucide-react';
 import Image from 'next/image';
-import UserEarlyAccessModal from './UserEarlyAccessModal';
+import ModalManager from './ModalManager'; 
 import { Work_Sans } from 'next/font/google';
 
 const workSans = Work_Sans({ subsets: ['latin'] });
@@ -75,10 +75,11 @@ const translations = {
 };
 
 const DreamPlaceFinder = ({ lang = 'en-US' }) => {
-  const [isUserModalOpen, setIsUserModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false); 
   const [activeTab, setActiveTab] = useState('buy');
   const t = translations[lang] || translations['en-US'];
   const isFrench = lang === 'fr';
+
 
   const baseCardStyle = {
     width: 'auto',
@@ -228,17 +229,18 @@ const DreamPlaceFinder = ({ lang = 'en-US' }) => {
                 }}
               />
               <Search 
-                style={{
-                  position: 'absolute',
-                  right: '16px',
-                  top: '50%',
-                  transform: 'translateY(-50%)',
-                  color: '#DD4440',
-                  cursor: 'pointer'
-                }}
-                size={20}
-                onClick={() => setIsUserModalOpen(true)}
-              />
+        style={{
+          position: 'absolute',
+          right: '16px',
+          top: '50%',
+          transform: 'translateY(-50%)',
+          color: '#DD4440',
+          cursor: 'pointer'
+        }}
+        size={20}
+        onClick={() => setIsModalOpen(true)} // Updated onClick handler
+      />
+
             </div>
 
             <div style={{ marginTop: isFrench ? '24px' : '32px' }}>
@@ -429,7 +431,7 @@ const DreamPlaceFinder = ({ lang = 'en-US' }) => {
             <div style={{ textAlign: 'center' }}>
               <button 
                 style={getButtonStyle(isFrench)}
-                onClick={() => setIsUserModalOpen(true)}
+                onClick={() => setIsModalOpen(true)}
               >
                 {t.contact.button}
               </button>
@@ -438,10 +440,10 @@ const DreamPlaceFinder = ({ lang = 'en-US' }) => {
         </div>
       </section>
 
-      <UserEarlyAccessModal 
-        isOpen={isUserModalOpen} 
-        onClose={() => setIsUserModalOpen(false)} 
-        lang={lang} 
+      <ModalManager 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        lang={lang}
       />
     </div>
   );

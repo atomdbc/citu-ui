@@ -4,7 +4,7 @@ import React, { useState, useRef } from 'react';
 import Image from 'next/image';
 import { Work_Sans } from 'next/font/google';
 import Link from 'next/link';
-import UserEarlyAccessModal from './UserEarlyAccessModal';
+import ModalManager from './ModalManager'; // Changed import
 
 const workSans = Work_Sans({ subsets: ['latin'] });
 
@@ -92,7 +92,7 @@ const listingsData = {
 };
 
 const FutureListings = ({ lang = 'en-US' }) => {
-  const [isUserModalOpen, setIsUserModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false); // Renamed state variable
   const [currentSlide, setCurrentSlide] = useState(0);
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
@@ -329,7 +329,7 @@ const FutureListings = ({ lang = 'en-US' }) => {
         <div className="flex justify-center mt-8 sm:mt-10 lg:mt-12">
           <div className="flex items-center justify-center" style={{ transform: 'translateX(0px)' }}>
             <button
-              onClick={() => setIsUserModalOpen(true)}
+              onClick={() => setIsModalOpen(true)}
               className="hover:bg-[#EF4444] transition-colors duration-300"
               style={{
                 ...buttonStyle,
@@ -347,10 +347,11 @@ const FutureListings = ({ lang = 'en-US' }) => {
         </div>
       </div>
 
-      <UserEarlyAccessModal
-        isOpen={isUserModalOpen}
-        onClose={() => setIsUserModalOpen(false)}
+      <ModalManager
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
         lang={lang}
+        initialUserType="seeker"
       />
     </section>
   );

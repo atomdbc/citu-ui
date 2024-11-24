@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Heart, Share2, Building2, BedDouble, ShowerHead } from 'lucide-react';
 import Image from 'next/image';
-import UserEarlyAccessModal from '../UserEarlyAccessModal';
+import ModalManager from '../ModalManager';
 
 const translations = {
   'en-US': {
@@ -166,12 +166,13 @@ const translations = {
 
 
 const ListingDetailSection = ({ lang = 'en-US', listingId = '1' }) => {
-  const [isUserModalOpen, setIsUserModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false); // Renamed state variable
   const t = translations[lang] || translations['en-US'];
   const listing = t.listings[listingId] || t.listings['1'];
 
   const parkingInfo = listing.keyInfo.find(info => info.includes('Parking'));
   const otherKeyInfo = listing.keyInfo.filter(info => !info.includes('Parking'));
+
 
   // Agent Card Component
   const AgentCard = () => (
@@ -192,13 +193,14 @@ const ListingDetailSection = ({ lang = 'en-US', listingId = '1' }) => {
         </p>
         <button
           className="w-[160.74px] h-[55px] bg-[#FF746C] text-white rounded-2xl font-medium hover:bg-opacity-90 transition-colors"
-          onClick={() => setIsUserModalOpen(true)}
+          onClick={() => setIsModalOpen(true)} // Updated onClick handler
         >
           {t.contact}
         </button>
       </div>
     </div>
   );
+
 
   // Main content section
   const MainContent = ({ showTitle = true }) => (
@@ -386,10 +388,10 @@ const ListingDetailSection = ({ lang = 'en-US', listingId = '1' }) => {
       </div>
 
       {/* Modal */}
-      <UserEarlyAccessModal 
-        isOpen={isUserModalOpen} 
-        onClose={() => setIsUserModalOpen(false)} 
-        lang={lang} 
+      <ModalManager 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        lang={lang}
       />
     </div>
   );

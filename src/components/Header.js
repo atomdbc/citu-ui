@@ -4,13 +4,12 @@ import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import EarlyAccessModal from './EarlyAccessModal';
-import UserEarlyAccessModal from './UserEarlyAccessModal';
+import ModalManager from './ModalManager';
 
 const translations = {
   'en-US': {
     userEarlyAccess: 'Sign Up for Early Access',
-    agentEarlyAccess: "Early Access for Agents",
+    agentEarlyAccess: "Early Access",
     newHomes: 'New Homes',
     findDevelopments: 'Find Developments',
     findAgents: 'Find Agents/Agencies',
@@ -22,7 +21,7 @@ const translations = {
   },
   'fr': {
     userEarlyAccess: "S'inscrire pour l'Accès Anticipé",
-    agentEarlyAccess: "Accès anticipé pour les agents",
+    agentEarlyAccess: "Annonces Futures.",
     newHomes: 'Nouvelles Maisons',
     findDevelopments: 'Trouver des Développements',
     findAgents: 'Trouver des Agents/Agences',
@@ -63,10 +62,16 @@ const Header = ({ lang = 'en-US' }) => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLangDropdownOpen, setIsLangDropdownOpen] = useState(false);
-  const [isAgentModalOpen, setIsAgentModalOpen] = useState(false);
-  const [isUserModalOpen, setIsUserModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalType, setModalType] = useState(null); // Add state for modal type
   const menuRef = useRef(null);
   const langDropdownRef = useRef(null);
+
+  const handleModalOpen = (type) => {
+    setModalType(type);
+    setIsModalOpen(true);
+    setIsMenuOpen(false); // Close menu if open
+  };
 
   const getCurrentFlag = () => {
     const language = languages.find(l => l.code === lang);
@@ -88,7 +93,7 @@ const Header = ({ lang = 'en-US' }) => {
       key: 'userEarlyAccess', 
       label: t.userEarlyAccess, 
       highlight: true,
-      onClick: () => setIsUserModalOpen(true)
+      onClick: () => handleModalOpen('seeker')
     },
   ];
 
@@ -165,7 +170,7 @@ const Header = ({ lang = 'en-US' }) => {
             {/* Early Access Button */}
             <button 
               className="hidden sm:block bg-[#F87171] text-white px-6 py-3 rounded-xl hover:bg-[#EF4444] transition duration-300 text-base font-medium whitespace-nowrap"
-              onClick={() => setIsAgentModalOpen(true)}
+              onClick={() => handleModalOpen(true)}
               style={{ fontWeight:'600' }}>
               {t.agentEarlyAccess}
             </button>
@@ -216,8 +221,7 @@ const Header = ({ lang = 'en-US' }) => {
                           href="#" 
                           onClick={(e) => {
                             e.preventDefault();
-                            setIsAgentModalOpen(true);
-                            setIsMenuOpen(false);
+                            handleModalOpen(true);
                           }}
                           className="block px-4 py-2 text-[#F87171] font-semibold hover:bg-gray-100"
                         >
@@ -249,15 +253,14 @@ const Header = ({ lang = 'en-US' }) => {
       </div>
 
       {/* Modals */}
-      <UserEarlyAccessModal 
-        isOpen={isUserModalOpen} 
-        onClose={() => setIsUserModalOpen(false)} 
-        lang={lang} 
-      />
-      <EarlyAccessModal 
-        isOpen={isAgentModalOpen} 
-        onClose={() => setIsAgentModalOpen(false)} 
-        lang={lang} 
+      <ModalManager 
+        isOpen={isModalOpen}
+        onClose={() => {
+          setIsModalOpen(false);
+          setModalType(null);
+        }}
+        lang={lang}
+        initialUserType={modalType} // Pass the initial user type to show the correct form
       />
     </header>
   );
