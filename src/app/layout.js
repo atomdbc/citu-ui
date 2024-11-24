@@ -9,7 +9,7 @@ const workSans = Work_Sans({
 });
 
 export const metadata = {
-  title: 'CITU Real Estate',
+  title: 'citu',
   description: 'Find your dream property in Ivory Coast',
 };
 

@@ -28,17 +28,17 @@ const translations = {
     propertyDescription: 'Description du bien',
     listings: {
       '1': {
-        title: 'Appartement Moderne de 3 Chambres à Cocody',
+        title: 'Example Listing.',
         description1: 'Découvrez le luxe dans cet impressionnant appartement de 3 chambres à Cocody, Abidjan. S\'étendant sur plus de 110 mètres carrés, cette résidence moderne offre un design contemporain avec des finitions haut de gamme. La disposition spacieuse comprend un espace de vie décloisonné, parfait pour la vie familiale et la réception d\'invités.',
         description2: 'Situé dans une résidence sécurisée premium avec surveillance 24/7, ce bien assure confort et tranquillité d\'esprit. L\'emplacement offre un accès facile aux écoles internationales, centres commerciaux et établissements médicaux, idéal pour les familles recherchant une combinaison de luxe et de praticité à Cocody.'
       },
       '2': {
-        title: 'Villa de Luxe 4 Chambres à Riviera',
+        title: 'Example Listing.',
         description1: 'Cette villa exceptionnelle de 4 chambres à Riviera 1, Abidjan, présente 185 mètres carrés d\'espace de vie sophistiqué. La propriété met en valeur une architecture moderne avec des finitions premium, offrant un design ouvert qui relie harmonieusement les espaces de vie intérieurs et extérieurs. La cuisine entièrement équipée dispose d\'appareils dernier cri et d\'armoires sur mesure.',
         description2: 'Située dans le prestigieux quartier de Riviera 1, cette villa allie luxe et commodité. La propriété comprend un jardin magnifiquement paysagé, parfait pour les réceptions en extérieur, et une allée privée. Sa proximité avec les boutiques haut de gamme, les écoles internationales et le quartier des affaires en fait un choix idéal pour les acheteurs exigeants.'
       },
       '3': {
-        title: 'Suite Penthouse au Plateau',
+        title: 'Example Listing.',
         description1: 'Découvrez un luxe inégalé dans cette magnifique suite penthouse au Plateau, Abidjan. Cette résidence exclusive offre une vue panoramique à couper le souffle sur la ville et présente des finitions haut de gamme. Avec sa disposition généreuse et ses fenêtres allant du sol au plafond, l\'espace est baigné de lumière naturelle et offre une expérience de vie exceptionnelle.',
         description2: 'Le bien dispose d\'une terrasse privée parfaite pour recevoir, d\'équipements modernes et d\'un service de conciergerie 24/7. Sa situation centrale au Plateau permet un accès facile aux centres d\'affaires, aux restaurants gastronomiques et aux attractions culturelles, en faisant le choix parfait pour ceux qui recherchent le summum du luxe en milieu urbain.'
       }

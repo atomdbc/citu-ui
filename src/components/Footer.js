@@ -50,10 +50,9 @@ const Footer = ({ lang = 'en-US' }) => {
             <div className="mb-6">
               <Image
                 src="/footer_logo.png"
-                alt="Citu Logo"
+                alt="citu Logo"
                 width={220}
                 height={92}
-                className="brightness-0 invert"
               />
             </div>
             <p className="text-white text-sm mb-6">{t.description}</p>

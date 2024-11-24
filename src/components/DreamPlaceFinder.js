@@ -261,7 +261,7 @@ const DreamPlaceFinder = ({ lang = 'en-US' }) => {
                 />
                 <span 
                   style={{ 
-                    fontSize: isFrench ? '13px' : '14px',
+                    fontSize: isFrench ? '10px' : '11px',
                     fontWeight: '500',
                     color: '#4A4A4A'
                   }}

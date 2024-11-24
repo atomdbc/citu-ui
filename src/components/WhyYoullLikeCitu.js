@@ -126,7 +126,7 @@ const WhyYoullLikeCitu = ({ lang = 'en-US' }) => {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentIndex((current) => (current + 1) % t.testimonials.length);
-    }, 10000);
+    }, 2000);
 
     return () => clearInterval(timer);
   }, [t.testimonials.length]);
