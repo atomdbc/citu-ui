@@ -20,47 +20,56 @@ const translations = {
       {
         image: '/images/salama.png',
         quote: '"citu made my property search incredibly easy. Their user-friendly platform and detailed listings helped me find my dream home in no time!"',
-        name: "Salama"
+        name: "Salama",
+        alttext: "Happy homebuyer sharing their positive experience with Citu, finding their perfect property for sale in Abidjan, Ivory Coast."
       },
       {
         image: '/images/moktar.png',
         quote: '"As a first-time homebuyer, citu\'s guidance was invaluable. Their comprehensive information and responsive support made the whole process smooth and stress-free."',
-        name: "Moktar"
+        name: "Moktar",
+        alttext: "Satisfied customer recommending Citu for its easy-to-use platform to search for rental properties in Ivory Coast."
       },
       {
         image: '/images/jules.png',
         quote: '"citu\'s virtual tours saved me so much time. I could explore properties thoroughly online before deciding which ones to visit in person. It\'s a game-changer!"',
-        name: "Jules"
+        name: "Jules",
+        alttext: "First-time homebuyer testimonial praising Citu for helping them find affordable homes for sale in Abidjan, Ivory Coast."
       },
       {
         image: '/images/dieuveil.png',
         quote: '"Finding an apartment will be so much simpler. No more spending hours searching, the platform promises tools that will make it quick and efficient."',
-        name: "Dieuveil"
+        name: "Dieuveil",
+        alttext: "Property seeker testimonial on how Citu has streamlined property listings and helped them connect with buyers in Ivory Coast."
       },
       {
         image: '/images/jane.png',
         quote: '"What can be frustrating is having to pay 3 months in advance and 3 months security deposit to rent an apartment. With citu, I hope to easily filter and find apartments with more affordable deposit and advance payment conditions."',
-        name: "Jane"
+        name: "Jane",
+        alttext: "Client testimonial highlighting how Citu made it easier to find apartments for rent in Abidjan, Ivory Coast."
       },
       {
         image: '/images/madou.png',
         quote: '"I want to proceed carefully with buying my first home, and I see great potential in citu for finding, in a transparent and easy way, the house that matches me and my family."',
-        name: "Madou"
+        name: "Madou",
+        alttext: "Testimonial from a family who found their ideal home in Ivory Coast using Citu's real estate search platform."
       },
       {
         image: '/images/aboubacar.png',
         quote: '"Finally, a site that will allow comparing prices and real estate without going through dozens of unnecessary appointments. citu will truly revolutionize property buying and selling."',
-        name: "Aboubacar"
+        name: "Aboubacar",
+        alttext: ""
       },
       {
-        image: '/images/magagi.png',
+        image: '/images/Yaya.png',
         quote: '"I\'m curious and excited to rent my first home. Comparing prices and neighborhoods, getting in touch with certified agents - that\'s what I need and what I get from citu to start this new adventure."',
-        name: "Magagi"
+        name: "Yaya",
+        alttext: "Renter testimonial sharing how Citu’s platform helped them quickly find available rental properties in Ivory Coast."
       },
       {
         image: '/images/chafic.png',
         quote: '"I think citu will revolutionize land sales. I\'m looking forward to the visibility and direct contact with buyers that the platform promises to offer."',
-        name: "Chafic"
+        name: "Chafic",
+        alttext: "Property seller testimonial praising Citu for its effective marketing tools and exposure to potential buyers in Abidjan."
       }
     ])
   },
@@ -70,47 +79,56 @@ const translations = {
       {
         image: '/images/salama.png',
         quote: '"citu va rendre la recherche de locataires beaucoup plus simple. Je suis sûr que je pourrai trouver rapidement des personnes sérieuses grâce à la visibilité que le site va offrir."',
-        name: "Salama"
+        name: "Salama",
+        alttext: "Acheteur heureux partageant son expérience positive avec Citu, ayant trouvé la propriété parfaite à vendre à Abidjan, en Côte d'Ivoire."
       },
       {
         image: '/images/moktar.png',
         quote: '"Ce sera un vrai gain de temps avec des annonces claires et des propriétaires sérieux. En ce moment, je perds beaucoup de temps à trouver des biens qui correspendent pas avec mes désirs."',
-        name: "Moktar"
+        name: "Moktar",
+         alttext: ""
       },
       {
         image: '/images/jules.png',
         quote: '"Je suis vraiment enthousiaste à l\'idée d\'utiliser citu pour acheter ma première maison. La plateforme semble intuitive et va m\'aider à comparer facilement les offres dans différents quartiers."',
-        name: "Jules"
+        name: "Jules",
+         alttext: "Client satisfait recommandant Citu pour sa plateforme facile à utiliser pour rechercher des propriétés à louer en Côte d'Ivoire."
       },
       {
         image: '/images/dieuveil.png',
         quote: '"Trouver un appartement sera tellement plus simple. Plus besoin de passer des heures à chercher, la plateforme promet des outils qui vont rendre ça rapide et efficace."',
-        name: "Dieuveil"
+        name: "Dieuveil",
+         alttext: "Témoignage d'un primo-accédant louant Citu pour l'avoir aidé à trouver des maisons abordables à vendre à Abidjan, en Côte d'Ivoire."
       },
       {
         image: '/images/jane.png',
         quote: '"Ce qui peut être frustrant, c\'est qu\'il faut parfois payer 3 mois d\'avance et 3 mois de caution pour louer un appartement. Avec citu, j\'espère pouvoir filtrer plus facilement et trouver des appartements avec des conditions de caution et d\'avance plus abordables."',
-        name: "Jane"
+        name: "Jane",
+         alttext: "Témoignage d'un chercheur de propriété sur la façon dont Citu a simplifié les annonces immobilières et les a aidés à se connecter avec des acheteurs en Côte d'Ivoire."
       },
       {
         image: '/images/madou.png',
         quote: '"Je veux avancer prudemment pour l\'achat de ma première maison, et je vois beaucoup de potentiel dans citu pour trouver, de manière transparente et facile, la maison qui correspond à moi et à ma famille."',
-        name: "Madou"
+        name: "Madou",
+         alttext: "Témoignage d'un client mettant en avant la manière dont Citu a facilité la recherche d'appartements à louer à Abidjan, en Côte d'Ivoire."
       },
       {
         image: '/images/aboubacar.png',
         quote: '"Enfin un site qui va permettre de comparer les prix et les biens immobiliers sans passer par des dizaines de rendez-vous inutiles. citu va vraiment révolutionner l\'achat et la vente de propriétés."',
-        name: "Aboubacar"
+        name: "Aboubacar",
+         alttext: "Témoignage d'une famille qui a trouvé la maison idéale en Côte d'Ivoire en utilisant la plateforme de recherche immobilière de Citu."
       },
       {
-        image: '/images/magagi.png',
+        image: '/images/Yaya.png',
         quote: '"Je suis curieux et impatient de louer mon premier logement. Comparer les prix et les quartiers, entrer en contact avec des agents certifiés, c\'est ce dont j\'ai besoin et ce que j\'obtiens de citu pour commencer cette nouvelle aventure."',
-        name: "Magagi"
+        name: "Yaya",
+         alttext: "Témoignage d'un locataire partageant comment la plateforme de Citu les a aidés à trouver rapidement des propriétés à louer en Côte d'Ivoire."
       },
       {
         image: '/images/chafic.png',
         quote: '"Je pense que citu va révolutionner la vente de terrains. J\'attends avec impatience la visibilité et les contacts directs avec les acheteurs que la plateforme promet d\'offrir."',
-        name: "Chafic"
+        name: "Chafic",
+         alttext: "Témoignage d'un vendeur de propriété louant Citu pour ses outils de marketing efficaces et son exposition auprès des acheteurs potentiels à Abidjan."
       }
     ])
   }
@@ -228,7 +246,7 @@ const TestimonialCard = ({ testimonial }) => (
         <div className="w-32 h-32 rounded-full border-4 border-citu-red overflow-hidden">
           <Image 
             src={testimonial.image} 
-            alt={testimonial.name} 
+            alt={testimonial.alttext} 
             width={128} 
             height={128} 
             className="w-full h-full object-cover"

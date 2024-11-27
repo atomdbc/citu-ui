@@ -5,10 +5,32 @@ import Image from 'next/image';
 
 const workSans = Work_Sans({ subsets: ['latin'] });
 
-const UserTypeModal = ({ isOpen, onClose, onNext }) => {
+const translations = {
+  'en-US': {
+    title: 'Choose the option which best describes you',
+    options: {
+      seeker: 'Property\nSeeker',
+      agent: 'Real Estate\nAgent',
+      other: 'Other'
+    },
+    next: 'Next'
+  },
+  'fr': {
+    title: 'Choisissez l\'option qui vous décrit le mieux',
+    options: {
+      seeker: 'Chercheur\n des biens',
+      agent: 'Agent\nimmobilier',
+      other: 'Autre'
+    },
+    next: 'Suivant'
+  }
+};
+
+const UserTypeModal = ({ isOpen, onClose, onNext, lang = 'en-US' }) => {
   const [isAnimating, setIsAnimating] = useState(false);
   const [selectedType, setSelectedType] = useState(null);
   const modalRef = useRef(null);
+  const t = translations[lang] || translations['en-US'];
 
   useEffect(() => {
     if (isOpen) {
@@ -39,46 +61,48 @@ const UserTypeModal = ({ isOpen, onClose, onNext }) => {
 
   return (
     <div
-      className="fixed inset-0 bg-black/30 flex justify-center items-center z-50 backdrop-blur-sm
-        transition-opacity duration-300"
+      className={`fixed inset-0 bg-black/30 flex justify-center items-center z-50 backdrop-blur-sm
+        transition-opacity duration-300 ${isOpen ? 'opacity-100' : 'opacity-0'}`}
       onClick={handleBackdropClick}
     >
       <div
         ref={modalRef}
-        className={`bg-white rounded-[40px] w-[608px] relative
-          transition-all duration-300 ease-out transform shadow-[0px_4px_4px_rgba(0,0,0,0.25)]
+        className={`bg-white rounded-[20px] sm:rounded-[32px] w-full max-w-[608px] mx-4 relative
+          transition-all duration-300 ease-out transform 
+          ${isOpen ? 'translate-y-0 scale-100 opacity-100' : 'translate-y-4 scale-95 opacity-0'}
           ${workSans.className}`}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-6 right-6 text-gray-400 hover:text-gray-600 transition-colors"
+          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition-colors"
         >
           <X size={20} />
         </button>
 
-        <div className="flex flex-col items-center pt-[52px] px-[76px] pb-[48px]">
+        <div className="flex flex-col items-center px-6 sm:px-12 py-8 sm:py-12">
           {/* Logo */}
-          <Image
-            src="/citu_logo.png"
-            alt="Citu Logo"
-            width={140}
-            height={37}
-            priority
-            className="mb-[52px]"
-          />
+          <div className="relative w-[100px] h-[40px] sm:w-[140px] sm:h-[37px] mb-8 sm:mb-12">
+            <Image
+              src="/citu_logo.png"
+              alt="Citu Logo"
+              fill
+              priority
+              className="object-contain"
+            />
+          </div>
 
-          {/* Title - Now properly centered with max-width */}
-          <h2 className="text-[#DD4440] text-[24px] font-semibold leading-[36px] mb-[55px] text-center max-w-[350px] mx-auto">
-            Choose the option which best describes you
+          {/* Title */}
+          <h2 className="text-[#DD4440] text-lg sm:text-[24px] font-semibold leading-[1.5] mb-8 sm:mb-12 text-center max-w-[350px]">
+            {t.title}
           </h2>
 
           {/* Options */}
-          <div className="flex justify-between w-full mb-[55px]">
+          <div className="grid grid-cols-3 gap-8 sm:gap-12 w-full max-w-[456px] mb-8 sm:mb-12">
             {[
-              { label: 'Property\nSeeker', value: 'seeker' },
-              { label: 'Real Estate\nAgent', value: 'agent' },
-              { label: 'Other', value: 'other' }
+              { label: t.options.seeker, value: 'seeker' },
+              { label: t.options.agent, value: 'agent' },
+              { label: t.options.other, value: 'other' }
             ].map((option) => (
               <div
                 key={option.value}
@@ -86,23 +110,23 @@ const UserTypeModal = ({ isOpen, onClose, onNext }) => {
               >
                 <button
                   onClick={() => setSelectedType(option.value)}
-                  className="relative mb-6"
+                  className="relative mb-4 sm:mb-6"
                 >
                   <div 
-                    className={`w-[40px] h-[40px] rounded-full border-2 transition-all duration-200
+                    className={`w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 transition-all duration-200
                       ${selectedType === option.value 
                         ? 'border-[#DD4440] bg-[#DD4440]' 
                         : 'border-[#DD4440]'}`}
                   >
                     {selectedType === option.value && (
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <div className="w-2.5 h-2.5 bg-white rounded-full"></div>
+                        <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-white rounded-full"></div>
                       </div>
                     )}
                   </div>
                 </button>
 
-                <span className="text-[24px] font-semibold leading-[29px] text-black text-center whitespace-pre-line">
+                <span className="text-base sm:text-2xl font-semibold leading-tight text-black text-center whitespace-pre-line">
                   {option.label}
                 </span>
               </div>
@@ -113,13 +137,13 @@ const UserTypeModal = ({ isOpen, onClose, onNext }) => {
           <button
             onClick={handleNext}
             disabled={!selectedType}
-            className={`w-[176px] h-[56px] rounded-[16px] font-semibold text-white
+            className={`w-[160px] h-[56px] rounded-2xl font-work-sans font-semibold text-[20px] leading-[20px] text-white
               transition-all duration-300
               ${!selectedType 
                 ? 'bg-[#F87171] opacity-50 cursor-not-allowed' 
                 : 'bg-[#F87171] hover:bg-[#DD4440]'}`}
           >
-            Next
+            {t.next}
           </button>
         </div>
       </div>

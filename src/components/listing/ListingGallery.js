@@ -67,7 +67,7 @@ const ListingGallery = ({ images = [] }) => {
         <div className="relative w-full h-[600px]" onClick={() => openModal(galleryImages[0])}>
           <Image
             src={galleryImages[0]}
-            alt="Main property view"
+            alt="Elegant bedroom in a modern three-bedroom apartment in Cocody, Abidjan, featuring a king-sized bed, large windows, and a sophisticated interior design."
             fill
             className="object-cover rounded-lg"
           />
@@ -86,7 +86,7 @@ const ListingGallery = ({ images = [] }) => {
         <div className="relative h-[296px]" onClick={() => openModal(galleryImages[1])}>
           <Image
             src={galleryImages[1]}
-            alt="Interior view"
+            alt="Spacious living room in a modern three-bedroom apartment in Cocody, Abidjan, featuring contemporary furniture, a neutral color palette, and floor-to-ceiling windows."
             fill
             className="object-cover rounded-lg"
           />
@@ -96,7 +96,7 @@ const ListingGallery = ({ images = [] }) => {
           <div className="relative w-1/2 h-[296px]" onClick={() => openModal(galleryImages[2])}>
             <Image
               src={galleryImages[2]}
-              alt="Additional view"
+              alt="Modern kitchen in a two-bedroom apartment in Cocody, Abidjan, equipped with sleek cabinetry, stainless steel appliances, and a spacious countertop."
               fill
               className="object-cover rounded-lg"
             />
@@ -104,7 +104,7 @@ const ListingGallery = ({ images = [] }) => {
           <div className="relative w-1/2 h-[296px]" onClick={() => openModal(galleryImages[3])}>
             <Image
               src={galleryImages[3]}
-              alt="Additional view"
+              alt="Cozy bedroom in a modern two-bedroom apartment in Cocody, Abidjan, featuring a queen-sized bed, soft lighting, and a minimalist design."
               fill
               className="object-cover rounded-lg"
             />
@@ -145,7 +145,7 @@ const ListingGallery = ({ images = [] }) => {
             <div className="relative w-full h-full">
               <Image
                 src={selectedImage}
-                alt="Full size view"
+                alt="Modern two-bedroom apartment for sale in Cocody, Abidjan, featuring a spacious living area, contemporary kitchen, and balcony with city views."
                 fill
                 className="object-contain"
                 onClick={(e) => e.stopPropagation()} // Prevent closing when clicking the image

@@ -21,7 +21,7 @@ const translations = {
   },
   'fr': {
     userEarlyAccess: "S'inscrire pour l'Accès Anticipé",
-    agentEarlyAccess: "accès anticipé",
+    agentEarlyAccess: "Accès Anticipé",
     newHomes: 'Nouvelles Maisons',
     findDevelopments: 'Trouver des Développements',
     findAgents: 'Trouver des Agents/Agences',

@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { MapPin, Mail, Phone } from 'lucide-react';
 import { FaXTwitter, FaInstagram, FaYoutube, FaLinkedinIn } from 'react-icons/fa6';
-import ModalManager from './ModalManager'; // Replace UserEarlyAccessModal with ModalManager
+import ModalManager from './ModalManager';
 
 const translations = {
   'en-US': {
@@ -15,7 +15,10 @@ const translations = {
       "Find agents", "Sold prices", "Instant valuation", "Sign up for early access"
     ],
     contactUs: "Contact us",
-    allRights: "© 2024 citu. All rights reserved."
+    allRights: "© 2024 citu. All rights reserved.",
+    location: "Ivory Coast, Abidjan",
+    email: "info@citu.ci",
+    phone: "+316 23 09 82 90"
   },
   'fr': {
     description: "citu vous aide à trouver la bonne propriété plus rapidement, avec des annonces claires et un accès direct aux agents immobiliers en qui vous pouvez avoir confiance.",
@@ -25,7 +28,10 @@ const translations = {
       "Trouver des agents", "Prix de vente", "Évaluation instantanée", "S'inscrire pour un accès anticipé"
     ],
     contactUs: "Contactez-nous",
-    allRights: "© 2024 citu. Tous droits réservés."
+    allRights: "© 2024 citu. Tous droits réservés.",
+    location: "Côte d'Ivoire, Abidjan",
+    email: "info@citu.ci",
+    phone: "+316 23 09 82 90"
   }
 };
 
@@ -34,7 +40,6 @@ const Footer = ({ lang = 'en-US' }) => {
   const t = translations[lang] || translations['en-US'];
 
   const handleLinkClick = (linkText) => {
-    // Check if the clicked link is the early access link
     if (linkText.toLowerCase().includes('early access') || 
         linkText.toLowerCase().includes('accès anticipé')) {
       setIsModalOpen(true);
@@ -42,8 +47,8 @@ const Footer = ({ lang = 'en-US' }) => {
   };
 
   return (
-    <footer className="bg-[#DD4440] text-white py-16">
-      <div className="container mx-auto px-4">
+    <footer className="bg-[#DD4440] text-white">
+      <div className="container mx-auto px-4 pt-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           {/* Logo, Description, and Social Icons */}
           <div className="md:col-span-1 max-w-xs pl-5">
@@ -99,27 +104,30 @@ const Footer = ({ lang = 'en-US' }) => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center">
                 <MapPin size={20} className="mr-2" />
-                <span>123 Main St, Abidjan, Côte d'Ivoire</span>
+                <span>{t.location}</span>
               </li>
               <li className="flex items-center">
                 <Mail size={20} className="mr-2" />
-                <span>info@citu.ci</span>
+                <span>{t.email}</span>
               </li>
               <li className="flex items-center">
                 <Phone size={20} className="mr-2" />
-                <span>+225 12 345 6789</span>
+                <span>{t.phone}</span>
               </li>
             </ul>
           </div>
         </div>
+      </div>
 
-        {/* Copyright */}
-        <div className="mt-12 text-center text-sm">
-          <p className="text-white">{t.allRights}</p>
+      {/* Copyright - Now in a separate container with border-top */}
+      <div className="border-t border-white/20 mt-16">
+        <div className="container mx-auto px-4">
+          <div className="py-6 text-center text-sm">
+            <p className="text-white">{t.allRights}</p>
+          </div>
         </div>
       </div>
 
-      {/* Modal Manager instead of UserEarlyAccessModal */}
       <ModalManager 
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

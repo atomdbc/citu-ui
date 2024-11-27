@@ -33,7 +33,7 @@ const HeroSection = ({ lang = 'en-US' }) => {
       <div className="absolute inset-0 w-full h-full">
         <Image
           src="/images/hero.png"
-          alt="Woman with laptop"
+          alt="Person searching for properties for rent and sale in Ivory Coast using Citu on a laptop. Looking through the citu platform which showcases available listings in Ivory Coast and surrounding areas."
           fill
           className="object-cover object-left sm:object-center"
           priority

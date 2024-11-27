@@ -344,7 +344,7 @@ const DreamPlaceFinder = ({ lang = 'en-US' }) => {
             <div className="flex-1 relative">
               <Image 
                 src="/images/scraper4.png" 
-                alt="Property showcase 1" 
+                alt="Modern three-bedroom apartment for sale in Cocody, Abidjan, featuring a contemporary design, spacious interiors, and a private balcony with scenic views." 
                 fill
                 className="object-cover"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 180px"
@@ -357,7 +357,8 @@ const DreamPlaceFinder = ({ lang = 'en-US' }) => {
             <div className="flex-1 relative">
               <Image 
                 src="/images/scraper5.png" 
-                alt="Property showcase 2" 
+                alt="Spacious living room in a modern three-bedroom apartment in Cocody, Abidjan, featuring contemporary furniture, a neutral color palette, and floor-to-ceiling windows.
+" 
                 fill
                 className="object-cover"
                 sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 180px"

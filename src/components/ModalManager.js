@@ -41,6 +41,7 @@ const ModalManager = ({ isOpen, onClose, lang = 'en-US' }) => {
         isOpen={showTypeModal}
         onClose={onClose}
         onNext={handleTypeSelection}
+        lang={lang}  
       />
       
       {/* Show UserEarlyAccessModal for property seekers and others */}
