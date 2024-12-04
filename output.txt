@@ -9,15 +9,21 @@
 ├── public
 │   ├── citu_logo.png
 │   ├── footer_logo.png
-│   ├── footer_png.png
 │   ├── images
+│   │   ├── Yaya.png
+│   │   ├── aboubacar.png
+│   │   ├── chafic.png
+│   │   ├── dieuveil.png
 │   │   ├── family.jpeg
 │   │   ├── hero.png
+│   │   ├── jane.png
+│   │   ├── jules.png
 │   │   ├── listings
 │   │   │   ├── cocody1.png
 │   │   │   ├── cocody2.png
 │   │   │   ├── cocody3.png
 │   │   │   ├── cocody4.png
+│   │   │   ├── konate_aliane.png
 │   │   │   ├── plateau1.png
 │   │   │   ├── plateau2.png
 │   │   │   ├── plateau3.png
@@ -26,20 +32,22 @@
 │   │   │   ├── riviera2.png
 │   │   │   ├── riviera3.png
 │   │   │   └── riviera4.png
+│   │   ├── madou.png
 │   │   ├── map-placeholder.png
-│   │   ├── person1.png
-│   │   ├── person2.png
-│   │   ├── person3.png
+│   │   ├── moktar.png
 │   │   ├── placeholder-image.jpg
 │   │   ├── prev1.png
 │   │   ├── prev2.png
 │   │   ├── prev3.png
 │   │   ├── prev4.png
+│   │   ├── salama.png
 │   │   ├── scraper1.png
 │   │   ├── scraper2.png
 │   │   ├── scraper3.png
-│   │   └── scraper4.png
+│   │   ├── scraper4.png
+│   │   └── scraper5.png
 │   ├── next.svg
+│   ├── sitemap.xml
 │   └── vercel.svg
 ├── src
 │   ├── app
@@ -65,6 +73,7 @@
 │   │   ├── HeroSection.js
 │   │   ├── HowItWorks.js
 │   │   ├── ListingsSearchBar.js
+│   │   ├── ModalManager.js
 │   │   ├── Pagination.js
 │   │   ├── PropertyCard.js
 │   │   ├── ReviewForm.js
@@ -72,8 +81,10 @@
 │   │   ├── SearchBar.js
 │   │   ├── ThankYouModal.js
 │   │   ├── UserEarlyAccessModal.js
+│   │   ├── UserTypeModal.js
 │   │   ├── WhyChooseUs.js
 │   │   ├── WhyYoullLikeCitu.js
+│   │   ├── favicon.ico
 │   │   └── listing
 │   │       ├── AgentCard.js
 │   │       ├── ListingDetailSection.js
@@ -81,9 +92,13 @@
 │   │       ├── PropertyDescription.js
 │   │       ├── PropertyDetails.js
 │   │       └── PropertyFeatures.js
-│   └── pages
-│       ├── _app.js
-│       └── output.txt
+│   ├── data
+│   │   └── countryCodes.js
+│   ├── pages
+│   │   ├── _app.js
+│   │   └── output.txt
+│   └── services
+│       └── api.js
 └── tailwind.config.js
 
-12 directories, 75 files
+14 directories, 88 files
