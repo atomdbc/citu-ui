@@ -1,6 +1,6 @@
 // src/app/[lang]/layout.js
 import { Work_Sans } from 'next/font/google';
-import '../globals.css';
+import './globals.css';
 
 const workSans = Work_Sans({
   subsets: ['latin'],
