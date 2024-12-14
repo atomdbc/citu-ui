@@ -1,5 +1,5 @@
 // app/sitemap.xml/route.js
-import { NextResponse } from 'next/response';
+import { NextResponse } from 'next/server';
 
 export async function GET() {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>

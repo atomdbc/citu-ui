@@ -64,8 +64,7 @@
 │   │   ├── globals.css
 │   │   ├── layout.js
 │   │   ├── page.js
-│   │   ├── sitemap.js
-│   │   └── sitemap.xml
+│   │   └── sitemap
 │   │       └── route.js
 │   ├── components
 │   │   ├── BlogSection.js
@@ -107,4 +106,4 @@
 │       └── api.js
 └── tailwind.config.js
 
-15 directories, 93 files
+15 directories, 92 files
