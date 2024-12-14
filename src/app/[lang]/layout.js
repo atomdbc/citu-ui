@@ -7,13 +7,13 @@ const languages = {
     name: 'English',
     dir: 'ltr',
     description: 'Find your dream property in Côte d\'Ivoire. Browse apartments, houses, and commercial properties in Abidjan, Cocody, Plateau, and more.',
-    title: 'Citu.ci - Premier Real Estate Platform in Côte d\'Ivoire'
+    title: 'citu - Premier Real Estate Platform in Côte d\'Ivoire'
   },
   'fr': {
     name: 'Français',
     dir: 'ltr',
     description: 'Trouvez votre propriété de rêve en Côte d\'Ivoire. Parcourez les appartements, maisons et propriétés commerciales à Abidjan, Cocody, Plateau et plus encore.',
-    title: 'Citu.ci - Première Plateforme Immobilière en Côte d\'Ivoire'
+    title: 'citu - Première Plateforme Immobilière en Côte d\'Ivoire'
   }
 };
 
@@ -36,7 +36,7 @@ export async function generateMetadata({ params }) {
       title: langConfig.title,
       description: langConfig.description,
       url: `/${lang}`,
-      siteName: 'Citu.ci',
+      siteName: 'citu.ci',
       images: [
         {
           url: '/citu_logo.png',
