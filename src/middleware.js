@@ -2,20 +2,28 @@
 import { NextResponse } from 'next/server';
 
 const locales = ['en-US', 'fr'];
-const defaultLocale = 'fr'; // Set French as default
+const defaultLocale = 'fr';
+
+// Add public files that should be accessible without locale
+const publicFiles = [
+  '/sitemap.xml',
+  '/robots.txt',
+  '/favicon.ico'
+];
 
 function getLocale(request) {
-  // Get user's preferred language from header
   const acceptLanguage = request.headers.get('accept-language') || '';
-  
-  // Check if en-US is specifically requested, otherwise use French
   const preferredLocale = acceptLanguage.includes('en-US') ? 'en-US' : 'fr';
-  
   return preferredLocale;
 }
 
 export function middleware(request) {
   const { pathname } = request.nextUrl;
+
+  // Don't redirect public files
+  if (publicFiles.includes(pathname)) {
+    return;
+  }
 
   // Check if the pathname already includes a locale
   const pathnameHasLocale = locales.some(
@@ -39,6 +47,7 @@ export function middleware(request) {
 
 export const config = {
   matcher: [
-    '/((?!_next|api|images|favicon.ico|robots.txt).*)',
+    // Match all paths except static files and api routes
+    '/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt|.*\\..*).*)',
   ],
 };
