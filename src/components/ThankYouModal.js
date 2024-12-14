@@ -64,7 +64,7 @@ const ThankYouModal = ({ isOpen, onClose, lang = 'en-US' }) => {
         <div className="text-center mb-4 sm:mb-6">
           <Image 
             src="/citu_logo.png" 
-            alt="Citu Logo" 
+            alt="citu Logo" 
             width={100} 
             height={40} 
             className="mx-auto sm:w-[120px] sm:h-[48px]" 

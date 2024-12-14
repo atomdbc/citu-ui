@@ -85,7 +85,7 @@ const UserTypeModal = ({ isOpen, onClose, onNext, lang = 'en-US' }) => {
           <div className="relative w-[100px] h-[40px] sm:w-[140px] sm:h-[37px] mb-8 sm:mb-12">
             <Image
               src="/citu_logo.png"
-              alt="Citu Logo"
+              alt="citu Logo"
               fill
               priority
               className="object-contain"

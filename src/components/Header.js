@@ -122,7 +122,7 @@ const Header = ({ lang = 'en-US' }) => {
             <Link href={`/${lang}`}>
               <Image
                 src="/citu_logo.png"
-                alt="CITU Logo"
+                alt="citu Logo"
                 width={160}
                 height={42.82}
                 className="w-28 sm:w-32 md:w-36 lg:w-40 h-auto"

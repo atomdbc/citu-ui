@@ -185,7 +185,7 @@ const UserEarlyAccessModal = ({ isOpen, onClose, lang = 'en-US' }) => {
             <div className="relative w-[100px] h-[40px] sm:w-[120px] sm:h-[48px] mx-auto">
               <Image 
                 src="/citu_logo.png" 
-                alt="Citu Logo" 
+                alt="citu Logo" 
                 fill
                 className="object-contain"
                 sizes="(max-width: 640px) 100px, 120px"
