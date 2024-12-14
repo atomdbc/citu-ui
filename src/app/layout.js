@@ -1,4 +1,4 @@
-// src/app/[lang]/layout.js
+// src/app/layout.js
 import { Work_Sans } from 'next/font/google';
 import './globals.css';
 
@@ -33,7 +33,7 @@ export const metadata = {
   alternates: {
     canonical: '/',
     languages: {
-      'en': '/en',
+      'en-US': '/en-US',
       'fr': '/fr',
     },
   },
@@ -53,9 +53,9 @@ export const metadata = {
   },
 };
 
-export default function RootLayout({ children, params }) {
+export default function RootLayout({ children }) {
   return (
-    <html lang={params.lang} className={workSans.variable}>
+    <html className={workSans.variable}>
       <body className="min-h-screen w-full m-0 p-0 bg-white font-work-sans">
         <div className="flex flex-col min-h-screen">
           {children}

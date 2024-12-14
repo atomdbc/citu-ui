@@ -76,6 +76,7 @@
 │   │   ├── ModalManager.js
 │   │   ├── Pagination.js
 │   │   ├── PropertyCard.js
+│   │   ├── PropertyJsonLd.js
 │   │   ├── ReviewForm.js
 │   │   ├── ReviewList.js
 │   │   ├── SearchBar.js
@@ -101,4 +102,4 @@
 │       └── api.js
 └── tailwind.config.js
 
-14 directories, 88 files
+14 directories, 89 files
