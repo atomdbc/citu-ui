@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+
+  <!-- Root Domain -->
+  <url>
+    <loc>https://citu.ci</loc>
+    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
+    <priority>1.00</priority>
+    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://citu.ci/en-US"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://citu.ci/fr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://citu.ci"/>
+  </url>
+
+  <!-- Main Language Versions -->
+  <url>
+    <loc>https://citu.ci/en-US</loc>
+    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
+    <priority>1.00</priority>
+    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://citu.ci/fr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://citu.ci"/>
+    <image:image>
+      <image:loc>https://citu.ci/citu_logo.png</image:loc>
+      <image:title>Citu.ci Logo</image:title>
+      <image:caption>Premier Real Estate Platform in Côte d'Ivoire</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://citu.ci/fr</loc>
+    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
+    <priority>1.00</priority>
+    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://citu.ci/en-US"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://citu.ci"/>
+  </url>
+
+  <!-- Main Listing Pages -->
+  <url>
+    <loc>https://citu.ci/en-US/listings</loc>
+    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
+    <priority>0.90</priority>
+    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://citu.ci/fr/listings"/>
+    <image:image>
+      <image:loc>https://citu.ci/images/listings/cocody1.png</image:loc>
+      <image:title>Featured Properties in Cocody</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://citu.ci/fr/listings</loc>
+    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
+    <priority>0.90</priority>
+    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://citu.ci/en-US/listings"/>
+  </url>
+
+  <!-- Individual Listings -->
+  <url>
+    <loc>https://citu.ci/en-US/listings/1</loc>
+    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://citu.ci/fr/listings/1"/>
+    <image:image>
+      <image:loc>https://citu.ci/images/listings/cocody1.png</image:loc>
+      <image:title>Luxury Property in Cocody</image:title>
+      <image:caption>Spacious apartment with modern amenities</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://citu.ci/fr/listings/1</loc>
+    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://citu.ci/en-US/listings/1"/>
+  </url>
+
+  <!-- Location-based Pages -->
+  <url>
+    <loc>https://citu.ci/en-US/listings/location/cocody</loc>
+    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
+    <priority>0.85</priority>
+    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://citu.ci/fr/listings/location/cocody"/>
+  </url>
+
+  <url>
+    <loc>https://citu.ci/en-US/listings/location/plateau</loc>
+    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
+    <priority>0.85</priority>
+    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://citu.ci/fr/listings/location/plateau"/>
+  </url>
+
+  <url>
+    <loc>https://citu.ci/en-US/listings/location/riviera</loc>
+    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
+    <priority>0.85</priority>
+    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://citu.ci/fr/listings/location/riviera"/>
+  </url>
+
+  <!-- Property Type Pages -->
+  <url>
+    <loc>https://citu.ci/en-US/listings/type/apartment</loc>
+    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
+    <priority>0.85</priority>
+    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://citu.ci/fr/listings/type/apartment"/>
+  </url>
+
+  <url>
+    <loc>https://citu.ci/en-US/listings/type/house</loc>
+    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
+    <priority>0.85</priority>
+    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://citu.ci/fr/listings/type/house"/>
+  </url>
+
+  <url>
+    <loc>https://citu.ci/en-US/listings/type/commercial</loc>
+    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
+    <priority>0.85</priority>
+    <changefreq>daily</changefreq>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://citu.ci/fr/listings/type/commercial"/>
+  </url>
+
+  <!-- Additional Important Pages -->
+  <url>
+    <loc>https://citu.ci/en-US/about</loc>
+    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://citu.ci/fr/about"/>
+  </url>
+
+  <url>
+    <loc>https://citu.ci/en-US/contact</loc>
+    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
+    <priority>0.70</priority>
+    <changefreq>monthly</changefreq>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://citu.ci/fr/contact"/>
+  </url>
+
+  <!-- Blog Section -->
+  <url>
+    <loc>https://citu.ci/en-US/blog</loc>
+    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
+    <priority>0.75</priority>
+    <changefreq>weekly</changefreq>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://citu.ci/fr/blog"/>
+  </url>
+
+  <!-- Dynamic Listing Pages (2-3 as examples) -->
+  <url>
+    <loc>https://citu.ci/en-US/listings/2</loc>
+    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+    <changefreq>weekly</changefreq>
+    <image:image>
+      <image:loc>https://citu.ci/images/listings/plateau1.png</image:loc>
+      <image:title>Modern Office Space in Plateau</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://citu.ci/en-US/listings/3</loc>
+    <lastmod>2024-12-14T00:00:00+00:00</lastmod>
+    <priority>0.80</priority>
+    <changefreq>weekly</changefreq>
+    <image:image>
+      <image:loc>https://citu.ci/images/listings/riviera1.png</image:loc>
+      <image:title>Luxury Villa in Riviera</image:title>
+    </image:image>
+  </url>
+
+</urlset>
