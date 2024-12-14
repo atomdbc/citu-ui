@@ -1,5 +1,4 @@
-import { redirect } from 'next/navigation';
-
-export default function Home() {
-  redirect('/fr');
+// app/page.js
+export default function Page() {
+  return null;
 }
