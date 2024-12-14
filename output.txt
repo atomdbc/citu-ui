@@ -47,6 +47,7 @@
 │   │   ├── scraper4.png
 │   │   └── scraper5.png
 │   ├── next.svg
+│   ├── robots.txt
 │   ├── sitemap.xml
 │   └── vercel.svg
 ├── src
@@ -62,7 +63,10 @@
 │   │   ├── favicon.ico
 │   │   ├── globals.css
 │   │   ├── layout.js
-│   │   └── page.js
+│   │   ├── page.js
+│   │   ├── sitemap.js
+│   │   └── sitemap.xml
+│   │       └── route.js
 │   ├── components
 │   │   ├── BlogSection.js
 │   │   ├── DreamPlaceFinder.js
@@ -95,6 +99,7 @@
 │   │       └── PropertyFeatures.js
 │   ├── data
 │   │   └── countryCodes.js
+│   ├── middleware.js
 │   ├── pages
 │   │   ├── _app.js
 │   │   └── output.txt
@@ -102,4 +107,4 @@
 │       └── api.js
 └── tailwind.config.js
 
-14 directories, 89 files
+15 directories, 93 files
