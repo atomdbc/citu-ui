@@ -1,4 +1,3 @@
-// src/app/layout.js
 import { Work_Sans } from 'next/font/google';
 import './globals.css';
 
@@ -7,6 +6,13 @@ const workSans = Work_Sans({
   variable: '--font-work-sans',
   display: 'swap',
 });
+
+// Separate viewport configuration
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#B4786F'
+};
 
 export const metadata = {
   metadataBase: new URL('https://citu.ci'),

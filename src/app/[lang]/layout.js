@@ -1,4 +1,3 @@
-// app/[lang]/layout.js
 import { headers } from 'next/headers';
 import Header from '@/components/Header';
 
@@ -15,6 +14,12 @@ const languages = {
     description: 'Trouvez votre propriété de rêve en Côte d\'Ivoire. Parcourez les appartements, maisons et propriétés commerciales à Abidjan, Cocody, Plateau et plus encore.',
     title: 'citu - Première Plateforme Immobilière en Côte d\'Ivoire'
   }
+};
+
+// Separate viewport configuration
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1
 };
 
 export async function generateMetadata({ params }) {
@@ -46,10 +51,6 @@ export async function generateMetadata({ params }) {
       ],
       locale: lang,
       type: 'website',
-    },
-    viewport: {
-      width: 'device-width',
-      initialScale: 1
     },
     icons: {
       icon: '/favicon.ico',
