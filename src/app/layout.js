@@ -17,7 +17,7 @@ export const viewport = {
 export const metadata = {
   metadataBase: new URL('https://citu.ci'),
   title: {
-    default: 'citu | Premier Real Estate Platform in Ivory Coast',
+    default: 'Citu - The Real Estate Platform In Côte d’Ivoire',
     template: '%s | citu'
   },
   description: 'Discover luxury properties in Abidjan - Cocody, Plateau, Riviera. Modern apartments, houses, and villas for sale and rent in Côte d\'Ivoire.',
